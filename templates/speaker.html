@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaker Mode</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+      .blinking-text {
+          
+          animation: blink 1s step-start infinite;
+      }
+
+      @keyframes blink {
+          50% {
+              opacity: 0;
+          }
+      }
+  </style>
+</head>
+<body>
+    <h1 class="blinking-text">MysticGameDev's Audio Library</h1>
+    <h3>Made by MysticGameDev to enhance game developing</h3>
+    <h1>WARNING LOUD AUDIO!</h1>
+  <img src="../static/img/speaker.svg" width="50" height="50" x="600" y="500">
+  <form action="{{ url_for('toggle_action') }}" method="post">
+    <label class="switch">
+        <input type="checkbox" name="toggle" value="on">
+        <span class="slider"></span>
+    </label>
+    <button type="submit">Speaker Mode!</button>
+</form>
+<img src="../static/img/waveform.svg" width="50" height="50" x="600" y="750">
+  <form action="{{ url_for('audio_action') }}" method="post">
+    <label class="switch">
+        <input type="checkbox" name="audio" value="on">
+        <span class="slider"></span>
+    </label>
+    <button type="submit">Audio Search!</button>
+</form>
+<img src="../static/img/folder-music.svg" width="50" height="50" x="800" y="500">
+<form action="{{ url_for('upload_action') }}" method="post">
+  <label class="switch">
+      <input type="checkbox" name="upcheck" value="on">
+      <span class="slider"></span>
+  </label>
+  <button type="submit">Upload Files!</button>
+</form>
+<div class="grid-container">
+  <div class="grid-item">
+    <form action="{{ url_for('play_win_speaker') }}" method="post" class="form">
+      <h2>Epic Win Music</h2>
+      <button>
+        <img src="../static/img/volume.svg" alt="Volume Icon" style="width: 20px; height: 20px;">
+        Play!
+    </button>
+    </form>
+  </div> 
+  <div class="grid-item">  
+    <form action="{{ url_for('play_arcade_speaker') }}" method="post" class="form">
+      <h2>Arcade Theme Music</h2>
+      <button>
+        <img src="../static/img/volume.svg" alt="Volume Icon" style="width: 20px; height: 20px;">
+        Play!
+    </button>
+    </form>
+  </div>
+  <div class="grid-item">
+    <form action="{{ url_for('play_suffer_speaker') }}" method="post" class="form">  
+      <h2>Defeat Theme</h2>
+      <button>
+        <img src="../static/img/volume.svg" alt="Volume Icon" style="width: 20px; height: 20px;">
+        Play!
+    </button>
+    </form>
+  </div>
+  <div class="grid-item">
+    <form action="{{ url_for('play_null_speaker') }}" method="post" class="form">  
+      <h2>null_sfx</h2>
+      <button>
+        <img src="../static/img/volume.svg" alt="Volume Icon" style="width: 20px; height: 20px;">
+        Play!
+    </button>
+    </form>
+  </div>
+  <div class="grid-item">
+    <form action="{{ url_for('play_menu_speaker') }}" method="post" class="form">
+      <h2>Random Menu Theme</h2>
+      <button>
+        <img src="../static/img/volume.svg" alt="Volume Icon" style="width: 20px; height: 20px;">
+        Play!
+    </button>
+    </form>
+  </div>
+  <div class="grid-item">
+    <form action="{{ url_for('play_start_speaker') }}" method="post" class="form">
+      <h2>A Lot of Instruments</h2>
+      <button>
+        <img src="../static/img/volume.svg" alt="Volume Icon" style="width: 20px; height: 20px;">
+        Play!
+    </button>
+    </form>
+  </div>
+  <div class="grid-item">
+    <form action="{{ url_for('play_lost_speaker') }}" method="post" class="form">
+      <h2>Lost In The Woods</h2>
+      <button>
+        <img src="../static/img/volume.svg" alt="Volume Icon" style="width: 20px; height: 20px;">
+        Play!
+    </button>
+    </form>
+  </div>
+  <div class="grid-item">
+    <form action="{{ url_for('play_casanova_speaker') }}" method="post" class="form">
+      <h2>Super Chill Rock Beat</h2>
+      <button>
+        <img src="../static/img/volume.svg" alt="Volume Icon" style="width: 20px; height: 20px;">
+        Play!
+    </button>
+    </form>
+  </div>
+</div>
+</body>
+
+
+</html>

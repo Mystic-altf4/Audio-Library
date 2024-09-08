@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <h1>Upload a File</h1>
+    <form action="{{ url_for('upload_file') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <img src="../static/img/music-file.svg" width="40" height="40"><button type="submit">Upload</button>
+    </form>
+    <form action="{{ url_for('anasayfa') }}" method="POST">
+        <button>
+            <img src="../static/img/sliders-v.svg" alt="Volume Icon" style="width: 20px; height: 20px;">
+            Back
+        </button>
+    </form>
+</body>
+</html>
